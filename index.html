@@ -177,33 +177,10 @@ body {
     color: #ddd;
 }
 
-.playlist-play-button {
-    display: block;
-    text-align: center;
-    margin-top: 25px;
-    padding: 14px;
+.youtube-box iframe {
+    width: 100%;
+    height: 200px;
     border-radius: 8px;
-    background: linear-gradient(135deg, #b8860b, #9acd32);
-    color: #111;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    transition: transform .15s ease, box-shadow .15s ease;
-}
-.playlist-play-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0,0,0,.4);
-}
-
-.empty-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: #555;
 }
 
 /* FOOTER */
@@ -258,7 +235,6 @@ body {
         <span class="heartbeat-value">❤️‍🔥</span>
         <span class="heartbeat-value">GLORY 100%</span>
     </div>
-    <div class="image-caption" style="text-align:center;margin-top:12px;">※ 최상의 페어링 상태</div>
 </div>
 
 <div class="playlist-section">
@@ -288,21 +264,20 @@ body {
             </div>
         </div>
 
-        <div class="playlist-box empty-box">
-            ARCHIVE ONLY
+        <!-- YOUTUBE ARCHIVE -->
+        <div class="playlist-box youtube-box">
+            <h3>ARCHIVE ONLY</h3>
+            <iframe 
+                src=https://www.youtube.com/embed/O83tqQpa9xk
+                frameborder="0"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
         </div>
-    </div>
-
-    <a href="https://kko.to/1TatbNZVCN" target="_blank" class="playlist-play-button">
-        ▶ PLAY ARCHIVE PLAYLIST
-    </a>
-    <div class="image-caption" style="text-align:center;margin-top:10px;">
-        ※ 멜론 플레이리스트로 이동하여 재생됩니다
     </div>
 </div>
 
 <div class="footer">FEARLESS DIVISION © 2024</div>
 </div>
-
 </body>
 </html>
