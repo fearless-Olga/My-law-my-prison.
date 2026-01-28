@@ -171,19 +171,29 @@ body {
 .glory-box { border-left: 4px solid #9acd32; }
 .pair-box  { border-left: 4px solid #888; }
 
-.playlist-box button {
-    width: 100%;
-    background: #2b2b2b;
-    border: none;
-    color: #eee;
-    padding: 10px 14px;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    text-align: left;
+.playlist-list {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #ddd;
 }
-.playlist-box button:hover {
-    background: #3a3a3a;
+
+.playlist-play-button {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    padding: 14px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #b8860b, #9acd32);
+    color: #111;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+.playlist-play-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,.4);
 }
 
 .empty-box {
@@ -192,9 +202,8 @@ body {
     justify-content: center;
     font-family: 'Orbitron', sans-serif;
     font-size: 12px;
-    letter-spacing: 2px;
-    color: #666;
-    text-align: center;
+    letter-spacing: 3px;
+    color: #555;
 }
 
 /* FOOTER */
@@ -254,47 +263,46 @@ body {
 
 <div class="playlist-section">
     <div class="section-title">ARCHIVE PLAYLIST</div>
-    <div class="playlist-grid">
 
+    <div class="playlist-grid">
         <div class="playlist-box pride-box">
-            <h3>PRIDE – Personal Theme</h3>
-            <button onclick="openSpotify('pride1')">윤하 – 죽음의 나선</button>
-            <button onclick="openSpotify('pride2')">Official HIGE DANDism – Cry Baby</button>
+            <h3>PRIDE — Personal Theme</h3>
+            <div class="playlist-list">
+                윤하 — 죽음의 나선<br>
+                Official HIGE DANDism — Cry Baby
+            </div>
         </div>
 
         <div class="playlist-box pair-box">
-            <h3>PAIR – Theme</h3>
-            <button onclick="openSpotify('pair1')">The Neighbourhood – Afraid</button>
+            <h3>PAIR — Theme</h3>
+            <div class="playlist-list">
+                The Neighbourhood — Afraid
+            </div>
         </div>
 
         <div class="playlist-box glory-box">
-            <h3>GLORY – Personal Theme</h3>
-            <button onclick="openSpotify('glory1')">Lauv – Paris in the Rain</button>
-            <button onclick="openSpotify('glory2')">Aimer – Ref:rain</button>
+            <h3>GLORY — Personal Theme</h3>
+            <div class="playlist-list">
+                Lauv — Paris in the Rain<br>
+                Aimer — Ref:rain
+            </div>
         </div>
 
         <div class="playlist-box empty-box">
-            곡 클릭 시 재생됩니다
+            ARCHIVE ONLY
         </div>
+    </div>
 
+    <a href="https://kko.to/1TatbNZVCN" target="_blank" class="playlist-play-button">
+        ▶ PLAY ARCHIVE PLAYLIST
+    </a>
+    <div class="image-caption" style="text-align:center;margin-top:10px;">
+        ※ 멜론 플레이리스트로 이동하여 재생됩니다
     </div>
 </div>
 
 <div class="footer">FEARLESS DIVISION © 2024</div>
 </div>
-
-<script>
-function openSpotify(key) {
-    const tracks = {
-        pride1: "https://open.spotify.com/track/3EUZiLMlP8hng1nm69OVEv",
-        pride2: "https://open.spotify.com/track/3IDF7N86lrcWaJEt9C1gbS",
-        glory1: "https://open.spotify.com/track/2WdAV1VqmllcEznKlVOFxG",
-        glory2: "https://open.spotify.com/track/6MNY72T605kPIOH3hnioxu",
-        pair1:  "https://open.spotify.com/track/7brQHA2CgQpcMBiOlfiXYb"
-    };
-    window.open(tracks[key], "_blank");
-}
-</script>
 
 </body>
 </html>
