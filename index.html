@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FEARLESS - Special Pair Archive</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Playfair+Display:ital,wght@1,700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    background-color: #141414;
+    color: #e0e0e0;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.archive-container {
+    width: 820px;
+    background: linear-gradient(145deg, #2b2b2b, #1b1b1b);
+    border-radius: 16px;
+    border: 1px solid #3a3a3a;
+    box-shadow: 0 20px 40px rgba(0,0,0,.6);
+    overflow: hidden;
+}
+
+/* HEADER */
+.header {
+    background: #000;
+    text-align: center;
+    padding: 22px;
+    border-bottom: 2px solid #b8860b;
+}
+.header-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 34px;
+    letter-spacing: 6px;
+    text-shadow: 0 0 6px #b8860b;
+}
+.header-subtitle {
+    margin-top: 6px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #aaa;
+}
+
+/* IMAGE */
+.main-image-container {
+    background: #202020;
+    padding: 30px;
+    text-align: center;
+}
+.main-image {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.5);
+}
+.image-caption {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+    font-style: italic;
+}
+
+/* PROFILE */
+.content-body {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+.profile {
+    flex: 1;
+    background: #252525;
+    border-radius: 12px;
+    padding: 25px;
+    border-left: 5px solid;
+}
+.pride-profile { border-color: #b8860b; }
+.glory-profile { border-color: #9acd32; }
+
+.profile-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-style: italic;
+}
+.pride-name { color: #b8860b; }
+.glory-name { color: #9acd32; }
+
+.profile-codename {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.info-label {
+    width: 85px;
+    font-weight: 700;
+    color: #888;
+}
+.info-value { color: #ddd; }
+
+.quote {
+    margin-top: 22px;
+    padding-left: 15px;
+    border-left: 3px solid #555;
+    font-size: 14px;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* SECTION */
+.section,
+.playlist-section {
+    padding: 30px;
+    background: #2a2a2a;
+    border-top: 1px solid #333;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    border-left: 4px solid #b8860b;
+    padding-left: 12px;
+    margin-bottom: 22px;
+}
+
+/* HEARTBEAT */
+.heartbeat-graph {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px;
+    border-radius: 8px;
+    background: linear-gradient(to right, #b8860b, #9acd32);
+    font-family: 'Orbitron', sans-serif;
+}
+.heartbeat-value {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* PLAYLIST */
+.playlist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.playlist-box {
+    background-color: #1f1f1f;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+.playlist-box h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+.pride-box { border-left: 4px solid #b8860b; }
+.glory-box { border-left: 4px solid #9acd32; }
+.pair-box  { border-left: 4px solid #888; }
+
+.playlist-box button {
+    width: 100%;
+    background: #2b2b2b;
+    border: none;
+    color: #eee;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+}
+.playlist-box button:hover {
+    background: #3a3a3a;
+}
+
+.empty-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #666;
+    text-align: center;
+}
+
+/* FOOTER */
+.footer {
+    background: #151515;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #666;
+    border-top: 1px solid #333;
+}
+</style>
+</head>
+
+<body>
+<div class="archive-container">
+
+<div class="header">
+    <div class="header-title">FEARLESS</div>
+    <div class="header-subtitle">SPECIAL PAIR ARCHIVE DIVISION</div>
+</div>
+
+<div class="main-image-container">
+    <img src="https://pbs.twimg.com/media/G_qRkFHbAAMdZ1E?format=jpg&name=medium" class="main-image">
+    <div class="image-caption">ⓒ 그거쟝</div>
+</div>
+
+<div class="content-body">
+    <div class="profile pride-profile">
+        <div class="profile-name pride-name">Pride</div>
+        <div class="profile-codename">S-Class Sentinel</div>
+        <div class="info-item"><span class="info-label">REAL NAME</span><span class="info-value">진현우</span></div>
+        <div class="info-item"><span class="info-label">AGE</span><span class="info-value">31</span></div>
+        <div class="info-item"><span class="info-label">ABILITY</span><span class="info-value">Graviton Press</span></div>
+        <div class="quote">"기어오르지 마. 넌 여기에 있어야 돼."</div>
+    </div>
+
+    <div class="profile glory-profile">
+        <div class="profile-name glory-name">Glory</div>
+        <div class="profile-codename">S-Class Guide</div>
+        <div class="info-item"><span class="info-label">REAL NAME</span><span class="info-value">백은호</span></div>
+        <div class="info-item"><span class="info-label">AGE</span><span class="info-value">28</span></div>
+        <div class="info-item"><span class="info-label">ABILITY</span><span class="info-value">Halo Network</span></div>
+        <div class="quote">"내 법, 내 감옥. 평생 당신 안에서 살아."</div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">페어링 안정도</div>
+    <div class="heartbeat-graph">
+        <span class="heartbeat-value">PRIDE 100%</span>
+        <span class="heartbeat-value">❤️‍🔥</span>
+        <span class="heartbeat-value">GLORY 100%</span>
+    </div>
+    <div class="image-caption" style="text-align:center;margin-top:12px;">※ 최상의 페어링 상태</div>
+</div>
+
+<div class="playlist-section">
+    <div class="section-title">ARCHIVE PLAYLIST</div>
+    <div class="playlist-grid">
+
+        <div class="playlist-box pride-box">
+            <h3>PRIDE – Personal Theme</h3>
+            <button onclick="openSpotify('pride1')">윤하 – 죽음의 나선</button>
+            <button onclick="openSpotify('pride2')">Official HIGE DANDism – Cry Baby</button>
+        </div>
+
+        <div class="playlist-box pair-box">
+            <h3>PAIR – Theme</h3>
+            <button onclick="openSpotify('pair1')">The Neighbourhood – Afraid</button>
+        </div>
+
+        <div class="playlist-box glory-box">
+            <h3>GLORY – Personal Theme</h3>
+            <button onclick="openSpotify('glory1')">Lauv – Paris in the Rain</button>
+            <button onclick="openSpotify('glory2')">Aimer – Ref:rain</button>
+        </div>
+
+        <div class="playlist-box empty-box">
+            곡 클릭 시 재생됩니다
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">FEARLESS DIVISION © 2024</div>
+</div>
+
+<script>
+function openSpotify(key) {
+    const tracks = {
+        pride1: "https://open.spotify.com/track/3EUZiLMlP8hng1nm69OVEv",
+        pride2: "https://open.spotify.com/track/3IDF7N86lrcWaJEt9C1gbS",
+        glory1: "https://open.spotify.com/track/2WdAV1VqmllcEznKlVOFxG",
+        glory2: "https://open.spotify.com/track/6MNY72T605kPIOH3hnioxu",
+        pair1:  "https://open.spotify.com/track/7brQHA2CgQpcMBiOlfiXYb"
+    };
+    window.open(tracks[key], "_blank");
+}
+</script>
+
+</body>
+</html>
