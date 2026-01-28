@@ -118,8 +118,7 @@ body {
 }
 
 /* SECTION */
-.section,
-.playlist-section {
+.section {
     padding: 30px;
     background: #2a2a2a;
     border-top: 1px solid #333;
@@ -131,22 +130,6 @@ body {
     border-left: 4px solid #b8860b;
     padding-left: 12px;
     margin-bottom: 22px;
-}
-
-/* HEARTBEAT */
-.heartbeat-graph {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    padding: 0 20px;
-    border-radius: 8px;
-    background: linear-gradient(to right, #b8860b, #9acd32);
-    font-family: 'Orbitron', sans-serif;
-}
-.heartbeat-value {
-    font-size: 20px;
-    font-weight: 700;
 }
 
 /* PLAYLIST */
@@ -171,16 +154,57 @@ body {
 .glory-box { border-left: 4px solid #9acd32; }
 .pair-box  { border-left: 4px solid #888; }
 
-.playlist-list {
+.playlist-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.playlist-box li {
+    margin-bottom: 8px;
     font-size: 14px;
-    line-height: 1.8;
     color: #ddd;
 }
 
-.youtube-box iframe {
-    width: 100%;
-    height: 200px;
-    border-radius: 8px;
+.empty-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #555;
+}
+
+/* DIVIDER */
+.divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin: 60px 30px;
+}
+
+/* TOGGLE */
+.toggle {
+    margin: 0 30px 30px;
+}
+
+.toggle summary {
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 6px 0;
+}
+
+.log-box {
+    margin-top: 20px;
+}
+
+.prompt-box {
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.03);
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 /* FOOTER */
@@ -229,156 +253,63 @@ body {
 </div>
 
 <div class="section">
-    <div class="section-title">페어링 안정도</div>
-    <div class="heartbeat-graph">
-        <span class="heartbeat-value">PRIDE 100%</span>
-        <span class="heartbeat-value">❤️‍🔥</span>
-        <span class="heartbeat-value">GLORY 100%</span>
+    <div class="section-title">ARCHIVE PLAYLIST</div>
+    <div class="playlist-grid">
+        <div class="playlist-box pride-box">
+            <h3>PRIDE – Personal Theme</h3>
+            <ul>
+                <li>윤하 – 죽음의 나선</li>
+                <li>Official HIGE DANDism – Cry Baby</li>
+            </ul>
+        </div>
+
+        <div class="playlist-box pair-box">
+            <h3>PAIR – Theme</h3>
+            <ul>
+                <li>The Neighbourhood – Afraid</li>
+            </ul>
+        </div>
+
+        <div class="playlist-box glory-box">
+            <h3>GLORY – Personal Theme</h3>
+            <ul>
+                <li>Lauv – Paris in the Rain</li>
+                <li>Aimer – Ref:rain</li>
+            </ul>
+        </div>
+
+        <div class="playlist-box empty-box">
+            ARCHIVE ONLY
+        </div>
     </div>
 </div>
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <title>My Law, My Prison</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<hr class="divider">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 40px;
-      background-color: #0d0d0d;
-      color: #eaeaea;
-      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 40px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    h1 {
-      font-size: 28px;
-      letter-spacing: 1px;
-      margin-bottom: 40px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section-title {
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      margin-bottom: 12px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    li {
-      margin-bottom: 6px;
-      opacity: 0.85;
-    }
-
-    /* 우측 영역 */
-    .right {
-      display: flex;
-      align-items: center; /* 세로 가운데 */
-      justify-content: center;
-    }
-
-    .video-box {
-      width: 100%;
-      max-width: 420px;
-      aspect-ratio: 16 / 9;
-      background: #000;
-      border: 1px solid rgba(255,255,255,0.15);
-      box-shadow: 0 0 20px rgba(255,255,255,0.05);
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .archive {
-      margin-top: 20px;
-      font-size: 12px;
-      letter-spacing: 1px;
-      opacity: 0.5;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-
-      .right {
-        margin-top: 40px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <h1>MY LAW, MY PRISON</h1>
-
-  <div class="container">
-    <!-- 좌측 텍스트 -->
-    <div class="left">
-      <div class="section">
-        <div class="section-title">PRIDE – Personal Theme</div>
-        <ul>
-          <li>윤하 – 죽음의 나선</li>
-          <li>Official HIGE DANDism – Cry Baby</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <div class="section-title">GLORY – Personal Theme</div>
-        <ul>
-          <li>Lauv – Paris in the Rain</li>
-          <li>Aimer – Ref:rain</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <div class="section-title">PAIR – Theme</div>
-        <ul>
-          <li>The Neighbourhood – Afraid</li>
-        </ul>
-      </div>
+<details class="toggle">
+    <summary>Log</summary>
+    <div class="log-box">
+        <blockquote class="twitter-tweet">
+            <a href="https://x.com/o0O_bl_/status/2015344766561706076"></a>
+        </blockquote>
     </div>
+</details>
 
-    <!-- 우측 유튜브 -->
-    <div class="right">
-      <div>
-        <div class="video-box">
-          <iframe 
-            src="https://www.youtube.com/embed/O83tqQpa9xk"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="archive">ARCHIVE ONLY</div>
-      </div>
+<details class="toggle">
+    <summary>Prompt</summary>
+    <div class="prompt-box">
+        [A handsome adult male, tall and slender, with large shoulders, slender hips,
+        slender wrists, prominent collarbone, sharp jawline, distinct features,
+        expressive dark eyes, hair ranging from light olive to yellow-green,
+        light olive, light lime, clean and fresh hair color, a white short-sleeved
+        shirt and black pants, an elegant posture, and a comfortable and gentle smile.]
     </div>
-  </div>
-</body>
-</html>
-
+</details>
 
 <div class="footer">FEARLESS DIVISION © 2024</div>
+
 </div>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
